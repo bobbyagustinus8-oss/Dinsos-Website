@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "judul": "Penyaluran Bantuan Pangan Non Tunai Tahap III Dimulai",
+    "kategori": "Kegiatan",
+    "tanggal": "2026-08-05",
+    "ringkasan": "Dinas Sosial mulai menyalurkan Bantuan Pangan Non Tunai (BPNT) tahap III kepada 12.400 Keluarga Penerima Manfaat (KPM) di 18 kecamatan.",
+    "isi": "Penyaluran dilakukan melalui agen bank yang bekerja sama dengan Himpunan Bank Negara (Himbara) dan dijadwalkan rampung dalam dua minggu. Petugas lapangan turut mendampingi lansia dan penyandang disabilitas agar proses pencairan berjalan lancar dan tepat sasaran.",
+    "gambar": "bpnt"
+  },
+  {
+    "id": 2,
+    "judul": "Pelatihan Keterampilan Kerja bagi Penyandang Disabilitas",
+    "kategori": "Kegiatan",
+    "tanggal": "2026-07-22",
+    "ringkasan": "Sebanyak 60 peserta mengikuti pelatihan menjahit, tata boga, dan digital marketing di Balai Rehabilitasi Sosial.",
+    "isi": "Pelatihan berlangsung selama 15 hari kerja dan ditutup dengan sertifikasi kompetensi serta fasilitasi kemitraan usaha bagi peserta terbaik. Program ini merupakan bagian dari upaya pemberdayaan dan kemandirian ekonomi penyandang disabilitas.",
+    "gambar": "pelatihan"
+  },
+  {
+    "id": 3,
+    "judul": "Verifikasi dan Validasi Data DTKS Serentak di 24 Kelurahan",
+    "kategori": "Berita",
+    "tanggal": "2026-07-10",
+    "ringkasan": "Pemutakhiran Data Terpadu Kesejahteraan Sosial (DTKS) dilakukan serentak untuk memastikan bantuan sosial tepat sasaran.",
+    "isi": "Warga diimbau untuk aktif melapor dan memperbarui data melalui kelurahan setempat atau melalui menu Pengaduan Masyarakat pada laman ini apabila terdapat data yang tidak sesuai kondisi riil di lapangan.",
+    "gambar": "dtks"
+  },
+  {
+    "id": 4,
+    "judul": "Dinas Sosial Raih Predikat WBK dari Kementerian PANRB",
+    "kategori": "Berita",
+    "tanggal": "2026-06-28",
+    "ringkasan": "Komitmen reformasi birokrasi dan pelayanan publik yang transparan membuahkan predikat Wilayah Bebas dari Korupsi (WBK).",
+    "isi": "Penghargaan ini menjadi dorongan bagi seluruh jajaran untuk terus meningkatkan kualitas pelayanan, akuntabilitas anggaran, dan keterbukaan informasi publik.",
+    "gambar": "penghargaan"
+  },
+  {
+    "id": 5,
+    "judul": "Posko Siaga Bencana Sosial Diaktifkan Jelang Musim Hujan",
+    "kategori": "Kegiatan",
+    "tanggal": "2026-06-15",
+    "ringkasan": "Dinas Sosial mengaktifkan posko siaga untuk kesiapsiagaan penanganan bencana sosial dan logistik darurat.",
+    "isi": "Posko beroperasi 24 jam dan terhubung langsung dengan BPBD serta Tagana (Taruna Siaga Bencana) untuk respons cepat evakuasi dan dapur umum.",
+    "gambar": "siaga"
+  }
+]

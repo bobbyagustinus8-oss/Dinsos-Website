@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dinas Sosial Kota Harapan — Merajut Kesejahteraan</title>
+<meta name="description" content="Situs resmi Dinas Sosial Kota Harapan: profil, berita, program bantuan sosial, data penerima bantuan, informasi layanan, dan pengaduan masyarakat." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<a href="#beranda" class="skip-link">Langsung ke konten utama</a>
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-top">
+    <div class="container header-top__inner">
+      <span>Pemerintah Kota Harapan</span>
+      <span class="header-top__api" id="apiStatus" title="Status koneksi API">
+        <i class="dot" aria-hidden="true"></i> <span id="apiStatusText">Memeriksa API…</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="container navbar">
+    <a href="#beranda" class="brand">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="40" height="40">
+          <circle cx="24" cy="24" r="22" fill="var(--navy)"/>
+          <path d="M24 8 L38 15 V24 C38 33 32 39 24 41 C16 39 10 33 10 24 V15 Z" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <path d="M17 22 L24 27 L31 22 M17 30 L24 35 L31 30" stroke="var(--cream)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>Dinas Sosial</strong>
+        <small>Kota Harapan</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Buka menu navigasi">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#beranda" data-route="beranda">Beranda</a></li>
+        <li><a href="#profil" data-route="profil">Profil Dinas Sosial</a></li>
+        <li><a href="#berita" data-route="berita">Berita/Kegiatan</a></li>
+        <li><a href="#program" data-route="program">Program Bantuan Sosial</a></li>
+        <li><a href="#penerima" data-route="penerima">Data Penerima Bantuan</a></li>
+        <li><a href="#layanan" data-route="layanan">Informasi Layanan</a></li>
+        <li><a href="#pengaduan" data-route="pengaduan">Pengaduan Masyarakat</a></li>
+        <li><a href="#kontak" data-route="kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ============ BERANDA ============ -->
+  <section class="route" id="route-beranda" data-title="Beranda">
+    <div class="hero">
+      <div class="hero__net" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="eyebrow">Jaring Pengaman Sosial Kota Harapan</p>
+        <h1>Merajut Kesejahteraan,<br>Menguatkan Jaring Sosial</h1>
+        <p class="hero__lede">Setiap simpul dalam jaring ini adalah satu keluarga yang terlayani, satu program yang tepat sasaran, satu langkah menuju keadilan sosial bagi warga Kota Harapan.</p>
+        <div class="hero__actions">
+          <a href="#program" class="btn btn--primary">Lihat Program Bantuan</a>
+          <a href="#pengaduan" class="btn btn--ghost-light">Sampaikan Pengaduan</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container stats-strip" id="statsStrip">
+      <div class="stat-card skeleton" data-stat="totalProgram">
+        <span class="stat-card__value">—</span>
+        <span class="stat-card__label">Program Bantuan Sosial</span>
+      </div>
+      <div class="stat-card skeleton" data-stat="totalPenerimaAktif">
+        <span class="stat-card__value">—</span>
+        <span class="stat-card__label">Penerima Manfaat Aktif</span>
+      </div>
+      <div class="stat-card skeleton" data-stat="totalKecamatanTerlayani">
+        <span class="stat-card__value">—</span>
+        <span class="stat-card__label">Kecamatan Terlayani</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value">24/7</span>
+        <span class="stat-card__label">Kanal Pengaduan Daring</span>
+      </div>
+    </div>
+
+    <div class="container section">
+      <div class="section__head">
+        <p class="eyebrow eyebrow--dark">Terbaru</p>
+        <h2>Berita &amp; Kegiatan</h2>
+        <a href="#berita" class="link-more">Lihat semua berita →</a>
+      </div>
+      <div class="card-grid" id="berandaBeritaList">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+
+    <div class="container section section--panel">
+      <div class="section__head">
+        <p class="eyebrow eyebrow--dark">Akses Cepat</p>
+        <h2>Layanan yang Sering Dicari</h2>
+      </div>
+      <div class="quick-links">
+        <a href="#penerima" class="quick-link">
+          <span class="quick-link__icon">📋</span>
+          <span class="quick-link__text"><strong>Cek Data Penerima</strong><small>Telusuri KPM per kecamatan &amp; program</small></span>
+        </a>
+        <a href="#program" class="quick-link">
+          <span class="quick-link__icon">🤝</span>
+          <span class="quick-link__text"><strong>Program Bantuan</strong><small>Syarat &amp; cara pendaftaran</small></span>
+        </a>
+        <a href="#pengaduan" class="quick-link">
+          <span class="quick-link__icon">📣</span>
+          <span class="quick-link__text"><strong>Ajukan Pengaduan</strong><small>Tanpa login, dapat tiket pelacakan</small></span>
+        </a>
+        <a href="#layanan" class="quick-link">
+          <span class="quick-link__icon">🗂️</span>
+          <span class="quick-link__text"><strong>Informasi Layanan</strong><small>Persyaratan &amp; estimasi waktu</small></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFIL DINAS SOSIAL ============ -->
+  <section class="route" id="route-profil" data-title="Profil Dinas Sosial">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Tentang Kami</p>
+        <h1>Profil Dinas Sosial</h1>
+      </div>
+    </div>
+    <div class="container section" id="profilContent">
+      <p class="loading-text">Memuat data profil…</p>
+    </div>
+  </section>
+
+  <!-- ============ BERITA / KEGIATAN ============ -->
+  <section class="route" id="route-berita" data-title="Berita/Kegiatan">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Informasi Terkini</p>
+        <h1>Berita &amp; Kegiatan</h1>
+      </div>
+    </div>
+    <div class="container section">
+      <div class="filter-bar">
+        <input type="search" id="beritaSearch" placeholder="Cari judul berita…" aria-label="Cari berita" />
+        <div class="chip-group" id="beritaKategoriChips">
+          <button class="chip is-active" data-kategori="">Semua</button>
+          <button class="chip" data-kategori="Berita">Berita</button>
+          <button class="chip" data-kategori="Kegiatan">Kegiatan</button>
+        </div>
+      </div>
+      <div class="card-grid" id="beritaList">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAM BANTUAN SOSIAL ============ -->
+  <section class="route" id="route-program" data-title="Program Bantuan Sosial">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Jaring Pengaman Sosial</p>
+        <h1>Program Bantuan Sosial</h1>
+        <p class="page-head__lede">Kenali program, sasaran, manfaat, dan cara pendaftaran setiap bantuan sosial yang tersedia.</p>
+      </div>
+    </div>
+    <div class="container section">
+      <div class="chip-group" id="programKategoriChips">
+        <button class="chip is-active" data-kategori="">Semua Kategori</button>
+        <button class="chip" data-kategori="Jaminan Sosial">Jaminan Sosial</button>
+        <button class="chip" data-kategori="Rehabilitasi Sosial">Rehabilitasi Sosial</button>
+        <button class="chip" data-kategori="Pemberdayaan Sosial">Pemberdayaan Sosial</button>
+      </div>
+      <div class="program-list" id="programList">
+        <div class="skeleton-card skeleton-card--wide"></div>
+        <div class="skeleton-card skeleton-card--wide"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DATA PENERIMA BANTUAN ============ -->
+  <section class="route" id="route-penerima" data-title="Data Penerima Bantuan">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Transparansi Data</p>
+        <h1>Data Penerima Bantuan</h1>
+        <p class="page-head__lede">Data ditampilkan untuk kepentingan transparansi publik. Nomor Induk Kependudukan (NIK) disamarkan sebagian untuk melindungi privasi warga.</p>
+      </div>
+    </div>
+    <div class="container section">
+      <div class="filter-bar filter-bar--grid">
+        <input type="search" id="penerimaSearch" placeholder="Cari nama penerima…" aria-label="Cari nama penerima" />
+        <select id="penerimaKecamatan" aria-label="Filter kecamatan">
+          <option value="">Semua Kecamatan</option>
+        </select>
+        <select id="penerimaProgram" aria-label="Filter program">
+          <option value="">Semua Program</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table" id="penerimaTable">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>NIK (disamarkan)</th>
+              <th>Kecamatan</th>
+              <th>Program</th>
+              <th>Tahun</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="penerimaTableBody">
+            <tr><td colspan="6" class="loading-text">Memuat data…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination" id="penerimaPagination"></div>
+    </div>
+  </section>
+
+  <!-- ============ INFORMASI LAYANAN ============ -->
+  <section class="route" id="route-layanan" data-title="Informasi Layanan">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Standar Pelayanan</p>
+        <h1>Informasi Layanan</h1>
+        <p class="page-head__lede">Seluruh layanan berikut tidak dipungut biaya (gratis) dan dapat diakses langsung tanpa akun/login.</p>
+      </div>
+    </div>
+    <div class="container section">
+      <div class="service-list" id="layananList">
+        <div class="skeleton-card skeleton-card--wide"></div>
+        <div class="skeleton-card skeleton-card--wide"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PENGADUAN MASYARAKAT ============ -->
+  <section class="route" id="route-pengaduan" data-title="Pengaduan Masyarakat">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Sampaikan Suara Anda</p>
+        <h1>Pengaduan Masyarakat</h1>
+        <p class="page-head__lede">Laporkan ketidaksesuaian data, kendala penyaluran bantuan, atau masukan lain. Pengaduan dapat dikirim tanpa perlu membuat akun.</p>
+      </div>
+    </div>
+
+    <div class="container section pengaduan-grid">
+      <form class="panel-card form" id="pengaduanForm" novalidate>
+        <h2>Formulir Pengaduan</h2>
+
+        <label class="field">
+          <span>Nama Pelapor <em>*</em></span>
+          <input type="text" name="nama" required maxlength="80" placeholder="Nama lengkap" />
+        </label>
+
+        <label class="field">
+          <span>Kontak (opsional)</span>
+          <input type="text" name="kontak" maxlength="80" placeholder="No. HP / WhatsApp / email" />
+        </label>
+
+        <label class="field">
+          <span>Kategori Pengaduan <em>*</em></span>
+          <select name="kategori" required>
+            <option value="" disabled selected>Pilih kategori</option>
+            <option value="Data tidak sesuai">Data tidak sesuai / DTKS</option>
+            <option value="Bantuan belum diterima">Bantuan belum diterima</option>
+            <option value="Dugaan penyalahgunaan">Dugaan penyalahgunaan bantuan</option>
+            <option value="Pelayanan petugas">Pelayanan petugas</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Kecamatan</span>
+          <input type="text" name="kecamatan" maxlength="60" placeholder="Kecamatan domisili" />
+        </label>
+
+        <label class="field">
+          <span>Isi Pengaduan <em>*</em></span>
+          <textarea name="isi" required minlength="15" maxlength="1000" rows="5" placeholder="Jelaskan pengaduan Anda secara rinci…"></textarea>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--block">Kirim Pengaduan</button>
+        <p class="form-note">Data yang Anda kirim digunakan semata untuk keperluan tindak lanjut pengaduan oleh Dinas Sosial.</p>
+        <div class="form-result" id="pengaduanResult" aria-live="polite"></div>
+      </form>
+
+      <div class="panel-card">
+        <h2>Cek Status Pengaduan</h2>
+        <p class="panel-card__lede">Masukkan nomor tiket yang Anda terima setelah mengirim pengaduan.</p>
+        <form class="cek-form" id="cekTiketForm">
+          <input type="text" id="tiketInput" placeholder="Contoh: DINSOS-2026-123456" required />
+          <button type="submit" class="btn btn--outline">Cek Status</button>
+        </form>
+        <div class="tiket-result" id="tiketResult"></div>
+
+        <hr />
+        <h3>Kanal Pengaduan Lain</h3>
+        <ul class="contact-list">
+          <li><strong>Hotline:</strong> 0800-1-778899 (bebas pulsa)</li>
+          <li><strong>WhatsApp:</strong> 0812-3456-7890</li>
+          <li><strong>Datang langsung:</strong> Loket Pengaduan, Kantor Dinas Sosial</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAK ============ -->
+  <section class="route" id="route-kontak" data-title="Kontak">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Hubungi Kami</p>
+        <h1>Kontak</h1>
+      </div>
+    </div>
+    <div class="container section" id="kontakContent">
+      <p class="loading-text">Memuat data kontak…</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <strong>Dinas Sosial Kota Harapan</strong>
+      <p>Merajut kesejahteraan, menguatkan jaring sosial bagi seluruh warga.</p>
+    </div>
+    <div class="footer__links">
+      <h4>Tautan</h4>
+      <a href="#profil">Profil Dinas Sosial</a>
+      <a href="#program">Program Bantuan Sosial</a>
+      <a href="#pengaduan">Pengaduan Masyarakat</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <div class="footer__meta">
+      <h4>Data &amp; API</h4>
+      <p>Situs ini menggunakan REST API publik tanpa login untuk seluruh konten dinamis.</p>
+      <code id="footerApiBase">API: memuat…</code>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span id="year"></span> Dinas Sosial Kota Harapan. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

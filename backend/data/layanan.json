@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nama": "Pendaftaran & Usulan DTKS",
+    "deskripsi": "Layanan pengusulan atau perbaikan data warga ke dalam Data Terpadu Kesejahteraan Sosial (DTKS).",
+    "persyaratan": ["KTP", "Kartu Keluarga", "Surat pengantar RT/RW"],
+    "waktu": "5 hari kerja",
+    "biaya": "Tidak dipungut biaya"
+  },
+  {
+    "id": 2,
+    "nama": "Legalisasi Lembaga Kesejahteraan Sosial (LKS)",
+    "deskripsi": "Layanan penerbitan/perpanjangan izin operasional bagi panti asuhan, panti jompo, dan yayasan sosial.",
+    "persyaratan": ["Akta pendirian yayasan", "Profil lembaga", "Laporan kegiatan tahunan"],
+    "waktu": "14 hari kerja",
+    "biaya": "Tidak dipungut biaya"
+  },
+  {
+    "id": 3,
+    "nama": "Rekomendasi Undian Gratis Berhadiah/Pengumpulan Sumbangan",
+    "deskripsi": "Layanan penerbitan surat rekomendasi bagi lembaga yang akan melakukan pengumpulan sumbangan sosial.",
+    "persyaratan": ["Proposal kegiatan", "Surat keterangan domisili lembaga", "Susunan panitia"],
+    "waktu": "7 hari kerja",
+    "biaya": "Tidak dipungut biaya"
+  },
+  {
+    "id": 4,
+    "nama": "Layanan Rujukan Rehabilitasi Sosial",
+    "deskripsi": "Layanan rujukan bagi penyandang masalah kesejahteraan sosial ke balai/panti rehabilitasi.",
+    "persyaratan": ["KTP/KK", "Surat keterangan tidak mampu", "Surat pengantar kelurahan"],
+    "waktu": "3 hari kerja",
+    "biaya": "Tidak dipungut biaya"
+  },
+  {
+    "id": 5,
+    "nama": "Kartu Penyandang Disabilitas",
+    "deskripsi": "Layanan penerbitan kartu identitas bagi penyandang disabilitas sebagai dasar akses layanan publik.",
+    "persyaratan": ["KTP/KK", "Surat keterangan dokter/puskesmas", "Pas foto"],
+    "waktu": "10 hari kerja",
+    "biaya": "Tidak dipungut biaya"
+  }
+]

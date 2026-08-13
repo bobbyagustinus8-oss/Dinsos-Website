@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "nama": "Program Keluarga Harapan (PKH)",
+    "singkatan": "PKH",
+    "kategori": "Jaminan Sosial",
+    "sasaran": "Keluarga miskin dan rentan yang memiliki komponen kesehatan, pendidikan, dan kesejahteraan sosial (ibu hamil, balita, anak sekolah, lansia, penyandang disabilitas berat).",
+    "manfaat": "Bantuan tunai bersyarat yang dicairkan setiap tiga bulan, besarannya disesuaikan dengan jumlah dan kategori anggota keluarga.",
+    "syarat": [
+      "Terdaftar dalam Data Terpadu Kesejahteraan Sosial (DTKS)",
+      "Terdapat komponen kesehatan, pendidikan, atau kesejahteraan sosial dalam keluarga",
+      "Bersedia memenuhi kewajiban pemeriksaan kesehatan dan kehadiran sekolah"
+    ],
+    "caraDaftar": "Pendaftaran melalui Musyawarah Desa/Kelurahan atau mengajukan usulan mandiri lewat aplikasi Cek Bansos, kemudian diverifikasi oleh pendamping sosial setempat."
+  },
+  {
+    "id": 2,
+    "nama": "Bantuan Pangan Non Tunai",
+    "singkatan": "BPNT",
+    "kategori": "Jaminan Sosial",
+    "sasaran": "Keluarga Penerima Manfaat (KPM) yang terdaftar dalam DTKS dengan kondisi ekonomi rentan pangan.",
+    "manfaat": "Saldo bantuan pangan yang dapat digunakan untuk membeli bahan pangan bergizi (beras, telur, dan sumber protein lain) di e-warong/agen resmi.",
+    "syarat": [
+      "Terdaftar dalam DTKS dan memiliki Kartu Keluarga Sejahtera (KKS)",
+      "Berdomisili sesuai KTP di wilayah penyaluran",
+      "Tidak sedang menerima bantuan pangan sejenis dari sumber lain"
+    ],
+    "caraDaftar": "Diusulkan melalui kelurahan/desa berdasarkan hasil pemutakhiran DTKS, selanjutnya ditetapkan oleh Kementerian Sosial."
+  },
+  {
+    "id": 3,
+    "nama": "Rehabilitasi Sosial Penyandang Disabilitas",
+    "singkatan": "RSPD",
+    "kategori": "Rehabilitasi Sosial",
+    "sasaran": "Penyandang disabilitas fisik, mental, intelektual, dan sensorik dari keluarga tidak mampu.",
+    "manfaat": "Alat bantu (kursi roda, tongkat, alat dengar), pelatihan keterampilan kerja, dan pendampingan sosial menuju kemandirian.",
+    "syarat": [
+      "Memiliki surat keterangan disabilitas dari fasilitas kesehatan",
+      "Terdaftar sebagai warga ber-KTP setempat",
+      "Mengajukan permohonan melalui Dinas Sosial atau LKS mitra"
+    ],
+    "caraDaftar": "Pengajuan langsung ke loket layanan Dinas Sosial dengan membawa dokumen kependudukan dan surat keterangan disabilitas."
+  },
+  {
+    "id": 4,
+    "nama": "Asistensi Rehabilitasi Sosial Lanjut Usia",
+    "singkatan": "ARSLU",
+    "kategori": "Jaminan Sosial",
+    "sasaran": "Lanjut usia (60 tahun ke atas) terlantar, tidak potensial, dan tidak memiliki keluarga/pengasuh.",
+    "manfaat": "Bantuan tunai berkala serta layanan perawatan sosial dan kesehatan dasar.",
+    "syarat": [
+      "Berusia 60 tahun atau lebih",
+      "Terdaftar dalam DTKS sebagai lansia terlantar",
+      "Diverifikasi oleh pendamping sosial lansia"
+    ],
+    "caraDaftar": "Pengusulan oleh keluarga, RT/RW, atau petugas sosial kelurahan kepada Dinas Sosial untuk proses verifikasi lapangan."
+  },
+  {
+    "id": 5,
+    "nama": "Kelompok Usaha Bersama",
+    "singkatan": "KUBE",
+    "kategori": "Pemberdayaan Sosial",
+    "sasaran": "Kelompok keluarga miskin yang tergabung dalam usaha ekonomi produktif bersama.",
+    "manfaat": "Bantuan modal usaha, pelatihan kewirausahaan, dan pendampingan pemasaran produk.",
+    "syarat": [
+      "Membentuk kelompok minimal 10 kepala keluarga",
+      "Memiliki rencana usaha bersama yang jelas",
+      "Diusulkan melalui pendamping sosial/PSM setempat"
+    ],
+    "caraDaftar": "Pengajuan proposal kelompok ke Bidang Pemberdayaan Sosial Dinas Sosial untuk diverifikasi dan dinilai kelayakannya."
+  },
+  {
+    "id": 6,
+    "nama": "Penanganan Anak Memerlukan Perlindungan Khusus",
+    "singkatan": "PAMPK",
+    "kategori": "Rehabilitasi Sosial",
+    "sasaran": "Anak korban kekerasan, anak jalanan, anak dalam situasi darurat, dan anak berhadapan dengan hukum.",
+    "manfaat": "Layanan perlindungan, konseling psikososial, reunifikasi keluarga, dan rujukan ke lembaga terkait.",
+    "syarat": [
+      "Laporan dapat diajukan oleh keluarga, sekolah, atau masyarakat",
+      "Anak berusia di bawah 18 tahun",
+      "Kasus terverifikasi oleh Tim Terpadu Perlindungan Anak"
+    ],
+    "caraDaftar": "Hubungi layanan pengaduan Dinas Sosial atau datang langsung ke unit layanan perlindungan anak."
+  }
+]

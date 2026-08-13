@@ -1,0 +1,14 @@
+[
+  { "id": 1, "nama": "Suprapto W.", "nik": "3204********0011", "kecamatan": "Sukamaju", "program": "PKH", "tahun": 2026, "status": "Aktif" },
+  { "id": 2, "nama": "Siti Aminah R.", "nik": "3204********0022", "kecamatan": "Cikupa", "program": "BPNT", "tahun": 2026, "status": "Aktif" },
+  { "id": 3, "nama": "Bambang H.", "nik": "3204********0033", "kecamatan": "Sukamaju", "program": "ARSLU", "tahun": 2026, "status": "Aktif" },
+  { "id": 4, "nama": "Yuliana S.", "nik": "3204********0044", "kecamatan": "Bojong Indah", "program": "PKH", "tahun": 2026, "status": "Aktif" },
+  { "id": 5, "nama": "Agus Santoso", "nik": "3204********0055", "kecamatan": "Cikupa", "program": "RSPD", "tahun": 2026, "status": "Aktif" },
+  { "id": 6, "nama": "Rukmini D.", "nik": "3204********0066", "kecamatan": "Karang Tengah", "program": "BPNT", "tahun": 2026, "status": "Aktif" },
+  { "id": 7, "nama": "Wahyu Nugroho", "nik": "3204********0077", "kecamatan": "Sukamaju", "program": "KUBE", "tahun": 2026, "status": "Aktif" },
+  { "id": 8, "nama": "Endang Kurniasih", "nik": "3204********0088", "kecamatan": "Bojong Indah", "program": "PKH", "tahun": 2026, "status": "Nonaktif" },
+  { "id": 9, "nama": "Hendra Gunawan", "nik": "3204********0099", "kecamatan": "Karang Tengah", "program": "ARSLU", "tahun": 2026, "status": "Aktif" },
+  { "id": 10, "nama": "Nurhayati", "nik": "3204********0100", "kecamatan": "Cikupa", "program": "PKH", "tahun": 2026, "status": "Aktif" },
+  { "id": 11, "nama": "Joko Susilo", "nik": "3204********0111", "kecamatan": "Sukamaju", "program": "BPNT", "tahun": 2026, "status": "Aktif" },
+  { "id": 12, "nama": "Ratna Sari", "nik": "3204********0122", "kecamatan": "Karang Tengah", "program": "RSPD", "tahun": 2026, "status": "Aktif" }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "dinsos-website",
+  "version": "1.0.0",
+  "description": "Website Dinas Sosial + REST API (satu layanan, tanpa login)",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js",
+    "install:backend": "cd backend && npm install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

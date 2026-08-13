@@ -1,0 +1,26 @@
+{
+  "nama": "Dinas Sosial Kota Harapan",
+  "tagline": "Merajut Kesejahteraan, Menguatkan Jaring Sosial",
+  "visi": "Terwujudnya masyarakat yang sejahtera, mandiri, dan berkeadilan sosial melalui pelayanan sosial yang profesional, transparan, dan tepat sasaran.",
+  "misi": [
+    "Meningkatkan kualitas pelayanan dan rehabilitasi sosial bagi penyandang masalah kesejahteraan sosial (PMKS).",
+    "Memperluas jangkauan dan ketepatan sasaran program bantuan sosial.",
+    "Membangun sistem data terpadu kesejahteraan sosial yang akurat dan mutakhir.",
+    "Mendorong partisipasi aktif masyarakat, dunia usaha, dan lembaga kesejahteraan sosial.",
+    "Mewujudkan tata kelola pemerintahan yang transparan dan akuntabel."
+  ],
+  "tugasPokok": "Dinas Sosial mempunyai tugas membantu pemerintah daerah melaksanakan urusan pemerintahan di bidang sosial, meliputi rehabilitasi sosial, jaminan sosial, pemberdayaan sosial, dan penanganan fakir miskin.",
+  "sejarah": "Dinas Sosial Kota Harapan dibentuk berdasarkan Peraturan Daerah tentang Pembentukan dan Susunan Perangkat Daerah, sebagai unsur pelaksana urusan pemerintahan bidang sosial yang menjadi kewenangan daerah.",
+  "strukturOrganisasi": [
+    { "jabatan": "Kepala Dinas", "nama": "Dr. Hj. Sri Wahyuni, M.Si." },
+    { "jabatan": "Sekretaris Dinas", "nama": "Bambang Purnomo, S.Sos., M.AP." },
+    { "jabatan": "Kepala Bidang Rehabilitasi Sosial", "nama": "Dewi Anggraini, S.Sos." },
+    { "jabatan": "Kepala Bidang Jaminan & Pemberdayaan Sosial", "nama": "Ahmad Fauzi, S.E." },
+    { "jabatan": "Kepala Bidang Penanganan Fakir Miskin", "nama": "Rina Kartika, S.Sos., M.Si." }
+  ],
+  "dasarHukum": [
+    "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial",
+    "Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah",
+    "Peraturan Daerah tentang Pembentukan dan Susunan Perangkat Daerah"
+  ]
+}
