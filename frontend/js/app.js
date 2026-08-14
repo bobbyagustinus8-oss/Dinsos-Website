@@ -79,6 +79,131 @@ async function checkApiStatus() {
 }
 
 // ---------------------------------------------------------
+// REVEAL-ON-SCROLL (halus) + BACK TO TOP
+// ---------------------------------------------------------
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+function observeReveals(root = document) {
+  $all(".reveal, .reveal-stagger", root).forEach((el) => {
+    if (!el.classList.contains("is-visible")) revealObserver.observe(el);
+  });
+}
+
+const backToTop = $("#backToTop");
+window.addEventListener("scroll", debounceRaf(() => {
+  backToTop.classList.toggle("is-visible", window.scrollY > 480);
+}));
+backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+function debounceRaf(fn) {
+  let ticking = false;
+  return (...args) => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { fn(...args); ticking = false; });
+  };
+}
+
+// ---------------------------------------------------------
+// HERO — jaring sosial hidup (canvas, seperti motion graphic/video)
+// ---------------------------------------------------------
+function initHeroNetwork() {
+  const canvas = $("#heroNetwork");
+  if (!canvas) return;
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) return;
+
+  const ctx = canvas.getContext("2d");
+  let width, height, nodes, raf;
+  const LINK_DIST = 150;
+  const NODE_COUNT_BASE = 42;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    width = canvas.width = rect.width * devicePixelRatio;
+    height = canvas.height = rect.height * devicePixelRatio;
+    canvas.style.width = rect.width + "px";
+    canvas.style.height = rect.height + "px";
+    const count = Math.max(18, Math.round((rect.width * rect.height) / 22000));
+    nodes = Array.from({ length: Math.min(count, NODE_COUNT_BASE) }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5 * devicePixelRatio,
+      vy: (Math.random() - 0.5) * 0.5 * devicePixelRatio,
+      r: (1.8 + Math.random() * 1.8) * devicePixelRatio,
+    }));
+  }
+
+  function step() {
+    ctx.clearRect(0, 0, width, height);
+    for (const n of nodes) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > width) n.vx *= -1;
+      if (n.y < 0 || n.y > height) n.vy *= -1;
+    }
+    const linkDist = LINK_DIST * devicePixelRatio;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < linkDist) {
+          ctx.strokeStyle = `rgba(255, 226, 160, ${0.55 * (1 - dist / linkDist)})`;
+          ctx.lineWidth = 1.4 * devicePixelRatio;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+    for (const n of nodes) {
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(255, 238, 200, 0.5)";
+      ctx.arc(n.x, n.y, n.r * 2.6, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.fillStyle = "#FFE7A8";
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(step);
+  }
+
+  resize();
+  step();
+  window.addEventListener("resize", debounceRaf(() => {
+    cancelAnimationFrame(raf);
+    resize();
+    step();
+  }));
+}
+
+// ---------------------------------------------------------
+// COUNT-UP untuk angka statistik beranda
+// ---------------------------------------------------------
+function animateCountUp(el, target, duration = 1100) {
+  const num = Number(target);
+  if (!Number.isFinite(num)) { el.textContent = target ?? "—"; return; }
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(num * eased).toLocaleString("id-ID");
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = num.toLocaleString("id-ID");
+  }
+  requestAnimationFrame(tick);
+}
+
+// ---------------------------------------------------------
 // ROUTER
 // ---------------------------------------------------------
 const routes = ["beranda", "profil", "berita", "program", "penerima", "layanan", "pengaduan", "kontak"];
@@ -104,6 +229,8 @@ function navigate() {
     loadedOnce.add(route);
     loaders[route]?.();
   }
+
+  observeReveals();
 }
 
 window.addEventListener("hashchange", navigate);
@@ -125,7 +252,7 @@ async function loadBeranda() {
     $all("[data-stat]").forEach((card) => {
       const key = card.dataset.stat;
       card.classList.remove("skeleton");
-      $(".stat-card__value", card).textContent = data[key] ?? "—";
+      animateCountUp($(".stat-card__value", card), data[key]);
     });
   } catch {
     $all("[data-stat]").forEach((card) => {
@@ -170,7 +297,7 @@ async function loadProfil() {
   try {
     const { data: p } = await apiGet("/profil");
     el.innerHTML = `
-      <div class="profile-grid">
+      <div class="profile-grid reveal-stagger">
         <div>
           <div class="profile-block">
             <h2>Visi</h2>
@@ -206,6 +333,7 @@ async function loadProfil() {
           </div>
         </div>
       </div>`;
+    observeReveals(el);
   } catch {
     el.innerHTML = errorBlock("Gagal memuat profil Dinas Sosial.");
   }
@@ -513,7 +641,7 @@ async function loadKontak() {
   try {
     const { data: k } = await apiGet("/kontak");
     el.innerHTML = `
-      <div class="kontak-grid">
+      <div class="kontak-grid reveal-stagger">
         <div class="kontak-card">
           <h2>Informasi Kontak</h2>
           <div class="kontak-row"><span class="kontak-row__icon">📍</span><div><strong>Alamat</strong>${escapeHtml(k.alamat)}</div></div>
@@ -525,9 +653,22 @@ async function loadKontak() {
           <div class="kontak-row"><span class="kontak-row__icon">📱</span><div><strong>Media Sosial</strong>Instagram ${escapeHtml(k.mediaSosial.instagram)} · Facebook ${escapeHtml(k.mediaSosial.facebook)}</div></div>
         </div>
         <div class="map-box">
-          Peta lokasi kantor Dinas Sosial<br/>(${k.koordinat.lat}, ${k.koordinat.lng})
+          <iframe
+            class="map-box__frame"
+            title="Peta lokasi kantor Dinas Sosial Kota Harapan"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=${k.koordinat.lng - 0.01}%2C${k.koordinat.lat - 0.008}%2C${k.koordinat.lng + 0.01}%2C${k.koordinat.lat + 0.008}&amp;layer=mapnik&amp;marker=${k.koordinat.lat}%2C${k.koordinat.lng}">
+          </iframe>
+          <a
+            class="map-box__link"
+            href="https://www.openstreetmap.org/?mlat=${k.koordinat.lat}&amp;mlon=${k.koordinat.lng}#map=17/${k.koordinat.lat}/${k.koordinat.lng}"
+            target="_blank" rel="noopener noreferrer">
+            Buka peta lebih besar ↗
+          </a>
         </div>
       </div>`;
+    observeReveals(el);
   } catch {
     el.innerHTML = errorBlock("Gagal memuat data kontak.");
   }
@@ -550,4 +691,5 @@ const loaders = {
 $("#year").textContent = new Date().getFullYear();
 checkApiStatus();
 setInterval(checkApiStatus, 20000);
+initHeroNetwork();
 navigate();

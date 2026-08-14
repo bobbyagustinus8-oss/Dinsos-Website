@@ -283,18 +283,18 @@ app.get("/api/kontak", (req, res) => {
   res.json({
     success: true,
     data: {
-      alamat: "Jl. Pahlawan Kesejahteraan No. 17, Kota Harapan, 40123",
+      alamat: "Jalan Mawar No. 18, Lubuk Pakam, Kabupaten Deli Serdang, Sumatera Utara 20514",
       telepon: "(022) 123-4567",
       hotline: "0800-1-778899 (bebas pulsa)",
       whatsapp: "0812-3456-7890",
-      email: "info@dinsos.kotaharapan.go.id",
+      email: "@dinsos.deliserdang.go.id",
       jamLayanan: "Senin - Jumat, 08.00 - 16.00 WIB",
       mediaSosial: {
-        instagram: "@dinsos.kotaharapan",
-        facebook: "Dinas Sosial Kota Harapan",
-        youtube: "Dinas Sosial Kota Harapan TV"
+        instagram: "@dinassosial_deliserdang",
+        facebook: "Dinas Sosial DeliSerdang",
+        youtube: "Dinsos DeliSerdang TV"
       },
-      koordinat: { lat: -6.914744, lng: 107.60981 }
+      koordinat: { lat: 3.56019, lng: 98.87622 }
     },
   });
 });
