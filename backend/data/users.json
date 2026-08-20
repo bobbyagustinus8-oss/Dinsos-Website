@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "nama": "Administrator Dinsos",
+    "passwordHash": "$2b$10$eWFId6jU7Kw.scNdsFEvp.PkmnQOkxgnvQO75pCmrMbFUvOV0i7Fi",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "staff",
+    "nama": "Staff Dinsos",
+    "passwordHash": "$2b$10$8ybbvAAmcUiIujLr15uNku/dxDbmVpTzkF2lgDqHS.TMNS61gv7h.",
+    "role": "staff"
+  }
+]
